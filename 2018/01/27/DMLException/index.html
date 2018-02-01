@@ -5,14 +5,18 @@
   
 
   
-  <title>Lynn</title>
+  <title>DML Exception Cannot specify both an external ID(Lightning Component) | Lynn</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Lynn">
-<meta property="og:url" content="https://lynn08.github.io/index.html">
+  <meta name="description" content="欢迎大家访问我的博客，此博客用于post日常遇到的bug. 从js的Helper传一个对象到Controller异常信息 通常我们会在Lightning Component 里面定义一个对象，在保存的时候可以直接get到这个对象，然后传值到Controller，此时在进行DML操作的时候会出现下面的异常: 12// ContactId  该字段是一个LookUp字段apex.runtime.imp">
+<meta property="og:type" content="article">
+<meta property="og:title" content="DML Exception Cannot specify both an external ID(Lightning Component)">
+<meta property="og:url" content="https://lynn08.github.io/2018/01/27/DMLException/index.html">
 <meta property="og:site_name" content="Lynn">
+<meta property="og:description" content="欢迎大家访问我的博客，此博客用于post日常遇到的bug. 从js的Helper传一个对象到Controller异常信息 通常我们会在Lightning Component 里面定义一个对象，在保存的时候可以直接get到这个对象，然后传值到Controller，此时在进行DML操作的时候会出现下面的异常: 12// ContactId  该字段是一个LookUp字段apex.runtime.imp">
+<meta property="og:updated_time" content="2018-02-01T13:09:30.579Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Lynn">
+<meta name="twitter:title" content="DML Exception Cannot specify both an external ID(Lightning Component)">
+<meta name="twitter:description" content="欢迎大家访问我的博客，此博客用于post日常遇到的bug. 从js的Helper传一个对象到Controller异常信息 通常我们会在Lightning Component 里面定义一个对象，在保存的时候可以直接get到这个对象，然后传值到Controller，此时在进行DML操作的时候会出现下面的异常: 12// ContactId  该字段是一个LookUp字段apex.runtime.imp">
   
     <link rel="alternate" href="lynn08.github.io/atom.xml" title="Lynn" type="application/atom+xml">
   
@@ -63,9 +67,7 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main">
-  
-    <article id="post-DMLException" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-DMLException" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="lynn08.github.io/2018/01/27/DMLException/" class="article-date">
   <time datetime="2018-01-27T12:12:23.443Z" itemprop="datePublished">2018-01-27</time>
@@ -78,8 +80,8 @@
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="lynn08.github.io/2018/01/27/DMLException/">DML Exception Cannot specify both an external ID(Lightning Component)</a>
+    <h1 class="article-title" itemprop="name">
+      DML Exception Cannot specify both an external ID(Lightning Component)
     </h1>
   
 
@@ -104,55 +106,19 @@
     </footer>
   </div>
   
-</article>
-
-
+    
+<nav id="article-nav">
   
-    <article id="post-contains()Method" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="lynn08.github.io/2018/01/27/contains()Method/" class="article-date">
-  <time datetime="2018-01-27T12:12:23.443Z" itemprop="datePublished">2018-01-27</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
   
-    <h1 itemprop="name">
-      <a class="article-title" href="lynn08.github.io/2018/01/27/contains()Method/">探究rendered中的CONTAINS()方法(Visualforce)</a>
-    </h1>
+    <a href="lynn08.github.io/2018/01/27/contains()Method/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Älter</strong>
+      <div class="article-nav-title">探究rendered中的CONTAINS()方法(Visualforce)</div>
+    </a>
   
+</nav>
 
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="探究关于Visualforce里面的Contains-方法"><a href="#探究关于Visualforce里面的Contains-方法" class="headerlink" title="探究关于Visualforce里面的Contains()方法"></a>探究关于Visualforce里面的Contains()方法</h2><h3 id="已知条件："><a href="#已知条件：" class="headerlink" title="已知条件："></a>已知条件：</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Mutil-Picklist Field :Product_Category__c</span><br><span class="line">values: Option1:Router; Option1:Router2</span><br></pre></td></tr></table></figure>
-<h3 id="rendered实现目标："><a href="#rendered实现目标：" class="headerlink" title="rendered实现目标："></a>rendered实现目标：</h3><pre><code>假设在Product_Category__c包含&apos;Router&apos;的情况下rendered, 代码如下
-</code></pre><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rendered=<span class="string">"&#123;!CONTAINS(NewCase.Product_Category__c,'Router')&#125;"</span>&gt;  //错误的</span><br></pre></td></tr></table></figure>
-<h3 id="rendered的错误效果："><a href="#rendered的错误效果：" class="headerlink" title="rendered的错误效果："></a>rendered的错误效果：</h3><pre><code>当Product_Category__c选中&apos;Router2&apos;的时候，也会去rendered，为什么呢？
-其实看似rendered&apos;Router&apos;,实则contains()把所有包含&apos;Router&apos;的所有选项都会匹配出来,代码如下:
-</code></pre><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rendered=<span class="string">"&#123;!CONTAINS(NewCase.Product_Category__c,'Router; Router2')&#125;"</span>&gt;</span><br></pre></td></tr></table></figure>
-<h3 id="解决办法"><a href="#解决办法" class="headerlink" title="解决办法"></a>解决办法</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">//可以在后台捆绑一个属性，去动态获取属性的值</span><br><span class="line">controller: </span><br><span class="line">public Boolean isContainsRouter &#123; get; <span class="built_in">set</span>; &#125;</span><br><span class="line">vf:</span><br><span class="line">&lt;apex:pageBlockSection title=<span class="string">"Router Requirement"</span> rendered=<span class="string">"&#123;!isContainsRouter&#125;"</span>&gt;</span><br></pre></td></tr></table></figure>
-<h3 id="结语，如果大家有更好的解决办法请发邮件告诉我谢谢！Lynn-Lau-meginfo-com"><a href="#结语，如果大家有更好的解决办法请发邮件告诉我谢谢！Lynn-Lau-meginfo-com" class="headerlink" title="结语，如果大家有更好的解决办法请发邮件告诉我谢谢！Lynn.Lau@meginfo.com"></a>结语，如果大家有更好的解决办法请发邮件告诉我谢谢！Lynn.Lau@meginfo.com</h3>
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://lynn08.github.io/2018/01/27/contains()Method/" data-id="cjd4iprns00015azb6puabwvi" class="article-share-link">Teilen</a>
-      
-      
-    </footer>
-  </div>
   
 </article>
-
-
-  
-
 
 </section>
         
