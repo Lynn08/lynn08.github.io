@@ -13,7 +13,7 @@
 <meta property="og:url" content="http://lynn08.github.io/2018/02/01/DMLException/index.html">
 <meta property="og:site_name" content="Lynn&#39;s Blog">
 <meta property="og:description" content="欢迎大家访问我的博客，此博客用于post日常遇到的bug. 从js的Helper传一个对象到Controller异常信息 通常我们会在Lightning Component 里面定义一个对象，在保存的时候可以直接get到这个对象，然后传值到Controller，此时在进行DML操作的时候会出现下面的异常: 12// ContactId  该字段是一个LookUp字段apex.runtime.imp">
-<meta property="og:updated_time" content="2018-02-01T14:18:54.262Z">
+<meta property="og:updated_time" content="2018-02-02T05:57:23.671Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="DML Exception-Cannot specify both an external ID(Lightning Component)">
 <meta name="twitter:description" content="欢迎大家访问我的博客，此博客用于post日常遇到的bug. 从js的Helper传一个对象到Controller异常信息 通常我们会在Lightning Component 里面定义一个对象，在保存的时候可以直接get到这个对象，然后传值到Controller，此时在进行DML操作的时候会出现下面的异常: 12// ContactId  该字段是一个LookUp字段apex.runtime.imp">
@@ -52,9 +52,9 @@
       </nav>
       <nav id="sub-nav">
         
-          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="Flux RSS"></a>
         
-        <a id="nav-search-btn" class="nav-icon" title="Suche"></a>
+        <a id="nav-search-btn" class="nav-icon" title="Rechercher"></a>
       </nav>
       <div id="search-form-wrap">
         <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://lynn08.github.io"></form>
@@ -92,11 +92,11 @@
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">// 本应该要的字段</span><br><span class="line">key:ContactId  value:0039E00000G8hlMQAR</span><br><span class="line">// What?怎么多了个对象？</span><br><span class="line">key:Contact  value:[object Object]</span><br></pre></td></tr></table></figure>
 <h3 id="解决方法："><a href="#解决方法：" class="headerlink" title="解决方法："></a>解决方法：</h3><p>遍历出值之后，这下明白了为什么会出现那样的异常，因为js在解析LookUp字段的时候，多出来了一个对象，这个才是导致DML操作失败的原因。</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">// 在向Controller中传入对象之前，用js删除多出来的对象的属性就OK了</span><br><span class="line">delete newCase.Contact;</span><br></pre></td></tr></table></figure>
-<h3 id="如果有更好的解决办法或者觉得我的想法是错误的，欢迎大家发邮件告知-Lynn-Lau-meginfo-com"><a href="#如果有更好的解决办法或者觉得我的想法是错误的，欢迎大家发邮件告知-Lynn-Lau-meginfo-com" class="headerlink" title="如果有更好的解决办法或者觉得我的想法是错误的，欢迎大家发邮件告知: Lynn.Lau@meginfo.com"></a>如果有更好的解决办法或者觉得我的想法是错误的，欢迎大家发邮件告知: Lynn.Lau@meginfo.com</h3>
+<h3 id="结语，如果大家有更好的解决办法请发邮件告诉我谢谢！Lynn-Lau-meginfo-com"><a href="#结语，如果大家有更好的解决办法请发邮件告诉我谢谢！Lynn-Lau-meginfo-com" class="headerlink" title="结语，如果大家有更好的解决办法请发邮件告诉我谢谢！Lynn.Lau@meginfo.com"></a>结语，如果大家有更好的解决办法请发邮件告诉我谢谢！Lynn.Lau@meginfo.com</h3>
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://lynn08.github.io/2018/02/01/DMLException/" data-id="cjd59w4yh0001n2p63uf773wa" class="article-share-link">Teilen</a>
+      <a data-url="http://lynn08.github.io/2018/02/01/DMLException/" data-id="cjd5iqbqq0000mep6w1471bwz" class="article-share-link">Partager</a>
       
       
     </footer>
@@ -107,8 +107,8 @@
   
   
     <a href="/2018/01/27/contains()Method/" id="article-nav-older" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Älter</strong>
-      <div class="article-nav-title">探究rendered中的CONTAINS()方法(Visualforce)</div>
+      <strong class="article-nav-caption">Ancien</strong>
+      <div class="article-nav-title">探究关于Visualforce里面的Contains()方法</div>
     </a>
   
 </nav>
@@ -130,7 +130,7 @@
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Archiv</h3>
+    <h3 class="widget-title">Archives</h3>
     <div class="widget">
       <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/02/">February 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/01/">January 2018</a></li></ul>
     </div>
@@ -140,7 +140,7 @@
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">letzter Beitrag</h3>
+    <h3 class="widget-title">Articles récents</h3>
     <div class="widget">
       <ul>
         
@@ -149,7 +149,7 @@
           </li>
         
           <li>
-            <a href="/2018/01/27/contains()Method/">探究rendered中的CONTAINS()方法(Visualforce)</a>
+            <a href="/2018/01/27/contains()Method/">探究关于Visualforce里面的Contains()方法</a>
           </li>
         
       </ul>
@@ -165,7 +165,7 @@
   <div class="outer">
     <div id="footer-info" class="inner">
       &copy; 2018 Lynn<br>
-      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+      Propulsé par <a href="http://hexo.io/" target="_blank">Hexo</a>
     </div>
   </div>
 </footer>
