@@ -7,16 +7,16 @@
   
   <title>探究关于Visualforce里面的Contains()方法 | Lynn&#39;s Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="欢迎大家访问我的博客，此博客用于post日常遇到的bug. 在rendered中使用CONTAINS()方法已知条件：12Mutil-Picklist Field :Product_Category__cvalues: Option1:Router; Option1:Router2 rendered实现目标：假设在Product_Category__c包含&amp;apos;Router&amp;apos;的情况">
+  <meta name="description" content="欢迎大家访问我的博客，此博客用于post日常遇到的知识点及bug. 在rendered中使用CONTAINS()方法已知条件：12Mutil-Picklist Field :Product_Category__cvalues: Option1:Router; Option1:Router2 rendered实现目标：假设在Product_Category__c包含&amp;apos;Router&amp;apos">
 <meta property="og:type" content="article">
 <meta property="og:title" content="探究关于Visualforce里面的Contains()方法">
 <meta property="og:url" content="http://lynn08.github.io/2018/01/27/contains()Method/index.html">
 <meta property="og:site_name" content="Lynn&#39;s Blog">
-<meta property="og:description" content="欢迎大家访问我的博客，此博客用于post日常遇到的bug. 在rendered中使用CONTAINS()方法已知条件：12Mutil-Picklist Field :Product_Category__cvalues: Option1:Router; Option1:Router2 rendered实现目标：假设在Product_Category__c包含&amp;apos;Router&amp;apos;的情况">
-<meta property="og:updated_time" content="2018-02-02T05:57:08.143Z">
+<meta property="og:description" content="欢迎大家访问我的博客，此博客用于post日常遇到的知识点及bug. 在rendered中使用CONTAINS()方法已知条件：12Mutil-Picklist Field :Product_Category__cvalues: Option1:Router; Option1:Router2 rendered实现目标：假设在Product_Category__c包含&amp;apos;Router&amp;apos">
+<meta property="og:updated_time" content="2018-02-08T07:02:38.108Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="探究关于Visualforce里面的Contains()方法">
-<meta name="twitter:description" content="欢迎大家访问我的博客，此博客用于post日常遇到的bug. 在rendered中使用CONTAINS()方法已知条件：12Mutil-Picklist Field :Product_Category__cvalues: Option1:Router; Option1:Router2 rendered实现目标：假设在Product_Category__c包含&amp;apos;Router&amp;apos;的情况">
+<meta name="twitter:description" content="欢迎大家访问我的博客，此博客用于post日常遇到的知识点及bug. 在rendered中使用CONTAINS()方法已知条件：12Mutil-Picklist Field :Product_Category__cvalues: Option1:Router; Option1:Router2 rendered实现目标：假设在Product_Category__c包含&amp;apos;Router&amp;apos">
   
     <link rel="alternate" href="/atom.xml" title="Lynn&#39;s Blog" type="application/atom+xml">
   
@@ -52,9 +52,9 @@
       </nav>
       <nav id="sub-nav">
         
-          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="Flux RSS"></a>
         
-        <a id="nav-search-btn" class="nav-icon" title="Suche"></a>
+        <a id="nav-search-btn" class="nav-icon" title="Rechercher"></a>
       </nav>
       <div id="search-form-wrap">
         <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://lynn08.github.io"></form>
@@ -85,7 +85,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>欢迎大家访问我的博客，此博客用于post日常遇到的bug.</p>
+        <p>欢迎大家访问我的博客，此博客用于post日常遇到的知识点及bug.</p>
 <h2 id="在rendered中使用CONTAINS-方法"><a href="#在rendered中使用CONTAINS-方法" class="headerlink" title="在rendered中使用CONTAINS()方法"></a>在rendered中使用CONTAINS()方法</h2><h3 id="已知条件："><a href="#已知条件：" class="headerlink" title="已知条件："></a>已知条件：</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Mutil-Picklist Field :Product_Category__c</span><br><span class="line">values: Option1:Router; Option1:Router2</span><br></pre></td></tr></table></figure>
 <h3 id="rendered实现目标："><a href="#rendered实现目标：" class="headerlink" title="rendered实现目标："></a>rendered实现目标：</h3><pre><code>假设在Product_Category__c包含&apos;Router&apos;的情况下rendered, 代码如下
 </code></pre><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rendered=<span class="string">"&#123;!CONTAINS(NewCase.Product_Category__c,'Router')&#125;"</span>&gt;  //错误的</span><br></pre></td></tr></table></figure>
@@ -97,7 +97,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://lynn08.github.io/2018/01/27/contains()Method/" data-id="cjde5e2l0000005zb22dwdn0h" class="article-share-link">Teilen</a>
+      <a data-url="http://lynn08.github.io/2018/01/27/contains()Method/" data-id="cjde5q3k500028zzb6cr5lfp1" class="article-share-link">Partager</a>
       
       
     </footer>
@@ -107,7 +107,7 @@
 <nav id="article-nav">
   
     <a href="/2018/02/01/DMLException/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Neuer</strong>
+      <strong class="article-nav-caption">Récent</strong>
       <div class="article-nav-title">
         
           DML Exception-Cannot specify both an external ID(Lightning Component)
@@ -135,7 +135,7 @@
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Archiv</h3>
+    <h3 class="widget-title">Archives</h3>
     <div class="widget">
       <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/02/">February 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/01/">January 2018</a></li></ul>
     </div>
@@ -145,7 +145,7 @@
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">letzter Beitrag</h3>
+    <h3 class="widget-title">Articles récents</h3>
     <div class="widget">
       <ul>
         
@@ -174,7 +174,7 @@
   <div class="outer">
     <div id="footer-info" class="inner">
       &copy; 2018 Lynn<br>
-      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+      Propulsé par <a href="http://hexo.io/" target="_blank">Hexo</a>
     </div>
   </div>
 </footer>
