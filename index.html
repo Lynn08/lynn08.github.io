@@ -85,21 +85,21 @@
       
         <p>欢迎大家访问我的博客，此博客用于post日常遇到的bug.</p>
 <h3 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h3><pre><code>在Lightning Component的开发中遇到这样的问题:
-Case 对象上创建的QuickAction都在整个页面的右下角，这个是salesforce设定的布局，
+在Case对象上创建的QuickAction都在整个页面的右下角(Chatter部分)，这个是salesforce设定的布局，
 这样就会导致我的页面会变得特别小，甚至不能够完全添加我们需要的字段，但是在今天翻文档的时候，发现
-这个问题是可以解决的，也就是说我么可以任意修改页面的布局(这里说的不是PageLayout)，下面就来教大家
-解决这个问题。
+这个问题是可以解决的，也就是说我们可以任意修改页面的布局(Record Page)，下面就来教大家解决这个问题。
 </code></pre><h3 id="创建一个自定义-Record-Page"><a href="#创建一个自定义-Record-Page" class="headerlink" title="创建一个自定义 Record Page"></a>创建一个自定义 Record Page</h3><pre><code>我们可以利用Lightning APP Builder来创建一个Record Page，下面是具体步骤：
-</code></pre><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">From Setup, enter App Builder <span class="keyword">in</span> the Quick Find box, <span class="keyword">then</span> select Lightning App Builder.</span><br><span class="line">Setup --&gt; App Builder --&gt; Click New --&gt; Select Record Page --&gt;  Select Object</span><br><span class="line">--&gt; Choose template --&gt; Click Finish</span><br></pre></td></tr></table></figure>
+</code></pre><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Setup --&gt; Select Lightning App Builder --&gt; Click New --&gt; Select Record Page --&gt;  Select Object --&gt; Choose template --&gt; Click Finish</span><br></pre></td></tr></table></figure>
 <h3 id="自定义Record-Page"><a href="#自定义Record-Page" class="headerlink" title="自定义Record Page"></a>自定义Record Page</h3><pre><code>接下来我们会看到Record Page的布局，此时我们可以根据需要选择我们的想要加进来的元素或者按照我们的意愿来拖动组件，使其成为我们想要的样子。
 </code></pre><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">右侧：Lightning Components</span><br><span class="line">中部：Record Page</span><br><span class="line">此时要想解决Case对象的布局问题，我们只需要拖动组件到我们想要的地方，perfect!</span><br></pre></td></tr></table></figure>
-<h3 id="激活Record-Page"><a href="#激活Record-Page" class="headerlink" title="激活Record Page"></a>激活Record Page</h3><pre><code>当我们调整好Record Page后，我们首先需要保存，保存完之后需要激活，我们可以看激活有三种选择：
-</code></pre><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">1.Make the page the org default <span class="keyword">for</span> the object.</span><br><span class="line">2.Make the page the default object record page <span class="keyword">for</span> specific Lightning apps.</span><br><span class="line">3.Assign the page to a combination of Lightning apps, record types, and profiles.</span><br><span class="line"></span><br><span class="line">在此我们根据自己的实际应用来选择，此时假设我们只想让Case上面的Record Type A来使用刚刚创建的Record Page，在这里选择3，选择相应的App, Profile, RecordType, 点击激活，大功告成~</span><br></pre></td></tr></table></figure>
-<h3 id="结语，以上为个人根据TraildHead总结，如有错误请指正！Lynn-Lau-meginfo-com"><a href="#结语，以上为个人根据TraildHead总结，如有错误请指正！Lynn-Lau-meginfo-com" class="headerlink" title="结语，以上为个人根据TraildHead总结，如有错误请指正！Lynn.Lau@meginfo.com"></a>结语，以上为个人根据TraildHead总结，如有错误请指正！Lynn.Lau@meginfo.com</h3>
+<h3 id="激活Record-Page"><a href="#激活Record-Page" class="headerlink" title="激活Record Page"></a>激活Record Page</h3><pre><code>当我们调整好Record Page后，我们首先需要保存，保存完之后需要激活，有三种选择方式激活：
+</code></pre><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">1.Make the page the org default <span class="keyword">for</span> the object.</span><br><span class="line">2.Make the page the default object record page <span class="keyword">for</span> specific Lightning apps.</span><br><span class="line">3.Assign the page to a combination of Lightning apps, record types, and profiles.</span><br></pre></td></tr></table></figure>
+<pre><code>在此我们根据自己的实际应用来选择，此时假设我们只想让Case上面的Record Type A 来使用刚刚创建的Record Page，在这里选择3，选择相应的App, Profile, RecordType, 点击激活，大功告成~
+</code></pre><h3 id="结语，以上为个人根据Trailhead总结，如有错误请指正！Lynn-Lau-meginfo-com"><a href="#结语，以上为个人根据Trailhead总结，如有错误请指正！Lynn-Lau-meginfo-com" class="headerlink" title="结语，以上为个人根据Trailhead总结，如有错误请指正！Lynn.Lau@meginfo.com"></a>结语，以上为个人根据Trailhead总结，如有错误请指正！Lynn.Lau@meginfo.com</h3>
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://lynn08.github.io/2018/02/08/Build Record Page/" data-id="cjde4mj000000eczbvfpbil84" class="article-share-link">Teilen</a>
+      <a data-url="http://lynn08.github.io/2018/02/08/Build Record Page/" data-id="cjde5e2l9000105zb6c2axiy0" class="article-share-link">Teilen</a>
       
       
     </footer>
@@ -142,7 +142,7 @@ Case 对象上创建的QuickAction都在整个页面的右下角，这个是sale
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://lynn08.github.io/2018/02/01/DMLException/" data-id="cjde4mj080001eczb1on5fblh" class="article-share-link">Teilen</a>
+      <a data-url="http://lynn08.github.io/2018/02/01/DMLException/" data-id="cjde5e2lb000205zb1qyrqmt4" class="article-share-link">Teilen</a>
       
       
     </footer>
@@ -186,7 +186,7 @@ Case 对象上创建的QuickAction都在整个页面的右下角，这个是sale
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://lynn08.github.io/2018/01/27/contains()Method/" data-id="cjde4mj0a0002eczbxn2ewph6" class="article-share-link">Teilen</a>
+      <a data-url="http://lynn08.github.io/2018/01/27/contains()Method/" data-id="cjde5e2l0000005zb22dwdn0h" class="article-share-link">Teilen</a>
       
       
     </footer>
