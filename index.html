@@ -61,6 +61,46 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-PermissionSet vs Profile" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/02/09/PermissionSet vs Profile/" class="article-date">
+  <time datetime="2018-02-09T07:40:53.820Z" itemprop="datePublished">2018-02-09</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/02/09/PermissionSet vs Profile/">Permission Set 与 Profile的不同</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>欢迎大家访问我的博客，此博客用于post日常遇到的知识点及bug.</p>
+<h3 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h3><h3 id="探究Permission-Set，Profile的不同"><a href="#探究Permission-Set，Profile的不同" class="headerlink" title="探究Permission Set，Profile的不同"></a>探究Permission Set，Profile的不同</h3><pre><code>在配置权限的时候，我们经常会用到Profile和Permission Set,同样都是设置权限,那么两者之间有什么不同呢?
+在此引用国外人的分析,小编觉得一语惊醒梦中人~不懂英语的同学可以自行翻译哦.
+</code></pre><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">Take this example:</span><br><span class="line"></span><br><span class="line">You have one profile assigned to 20 different users.</span><br><span class="line">Now Suppose you want give some extra permission to one of user. You have two options here.</span><br><span class="line">a) To change Profile permissions : By this way those extra permissions will received by every user who is having that profile</span><br><span class="line"></span><br><span class="line">b) Second way is to create a permission <span class="built_in">set</span> having those extra permission. You need to assign this permission <span class="built_in">set</span> to particular user by navigating to User detail page. In this way, you dont have to worry about other users, as only specific user is getting those extra permissions.</span><br><span class="line"></span><br><span class="line">You can assign permission <span class="built_in">set</span> as many users you want.</span><br><span class="line"></span><br><span class="line">The difference between Profile and Permission Sets is Profiles are used to restrict from something <span class="built_in">where</span> Permission Set allows user to get extra permissions.</span><br><span class="line"></span><br><span class="line">Hope this helps :)</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://lynn08.github.io/2018/02/09/PermissionSet vs Profile/" data-id="cjdfmjrha00023np6buplfo86" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-Build Record Page" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2018/02/08/Build Record Page/" class="article-date">
@@ -99,7 +139,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://lynn08.github.io/2018/02/08/Build Record Page/" data-id="cjde5u59e0000d7zbe2ncluk5" class="article-share-link">Share</a>
+      <a data-url="http://lynn08.github.io/2018/02/08/Build Record Page/" data-id="cjdfmjrgv00003np6uscz4fp0" class="article-share-link">Share</a>
       
       
     </footer>
@@ -142,7 +182,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://lynn08.github.io/2018/02/01/DMLException/" data-id="cjde5u59o0002d7zbk935tcbg" class="article-share-link">Share</a>
+      <a data-url="http://lynn08.github.io/2018/02/01/DMLException/" data-id="cjdfmjrh400013np6au51oqmp" class="article-share-link">Share</a>
       
       
     </footer>
@@ -186,7 +226,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://lynn08.github.io/2018/01/27/contains()Method/" data-id="cjde5u59l0001d7zbv1wwplry" class="article-share-link">Share</a>
+      <a data-url="http://lynn08.github.io/2018/01/27/contains()Method/" data-id="cjdfmjrhd00033np6nya6i8ii" class="article-share-link">Share</a>
       
       
     </footer>
@@ -225,6 +265,10 @@
     <h3 class="widget-title">Recent Posts</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/2018/02/09/PermissionSet vs Profile/">Permission Set 与 Profile的不同</a>
+          </li>
         
           <li>
             <a href="/2018/02/08/Build Record Page/">关于Case对象的Record Page布局问题(Lightning Component)</a>
